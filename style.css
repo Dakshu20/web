@@ -1,0 +1,263 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8e8c8;
+    color: #151515;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8e8c8;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 55px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #222;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #8b3fa4;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 7%;
+    gap: 50px;
+
+    background: linear-gradient(
+        120deg,
+        #f9eaca,
+        #f6dfc6
+    );
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.hero-content {
+    width: 55%;
+}
+
+.small-text {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.title {
+    font-size: clamp(65px, 8vw, 115px);
+    line-height: 0.88;
+    letter-spacing: -6px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.title span {
+    color: #8d3fa5;
+    display: block;
+}
+
+.description {
+    max-width: 520px;
+    color: #777;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.project-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #984bb0;
+    color: white;
+    padding: 17px 28px;
+    border-radius: 40px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background: #753585;
+    transform: translateY(-3px);
+}
+
+.cv-btn {
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cv-btn:hover {
+    color: #8d3fa5;
+}
+
+
+/* =========================
+   RIGHT IMAGE
+========================= */
+
+.hero-image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container {
+    width: 430px;
+    height: 570px;
+    overflow: hidden;
+    border-radius: 230px 230px 20px 20px;
+    background: #b9a1bd;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================
+   OTHER SECTIONS
+========================= */
+
+.section {
+    min-height: 500px;
+    padding: 100px 7%;
+    background: #fff;
+}
+
+.section:nth-of-type(3),
+.section:nth-of-type(5) {
+    background: #f8e8c8;
+}
+
+.section h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.section p {
+    color: #777;
+    font-size: 18px;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    nav {
+        height: 90px;
+    }
+
+    nav ul {
+        gap: 18px;
+    }
+
+    nav ul li a {
+        font-size: 11px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 6%;
+        gap: 60px;
+    }
+
+    .hero-content,
+    .hero-image {
+        width: 100%;
+    }
+
+    .small-text {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .title {
+        font-size: 60px;
+        letter-spacing: -3px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .image-container {
+        width: 320px;
+        height: 430px;
+    }
+
+    .section h2 {
+        font-size: 45px;
+    }
+}
